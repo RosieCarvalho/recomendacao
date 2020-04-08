@@ -194,7 +194,13 @@ def org(filmes_tags):
     # print(ft[:, 1])
     df = pd.DataFrame(data=z, index=np.unique(
         ft[:, 1]), columns=np.unique(ft[:, 0]))
-    print(df.shape)
+    # print(df.iloc[:5, :5])
+    for i in range(len(df.index)):
+        for ii in range(len(df.columns)):
+            print(ft[i], [df.columns[ii], df.index[i]])
+
+    # print(i)
+    # print(df.shape)
 
 
 class KnnRecommenderTag:
